@@ -1,11 +1,10 @@
 :root {
-  --primary-color: #00b9ae;
-  --secondary-color: #ff6b6b;
-  --accent-color: #ffd93d;
-  --bg-color: #1a1b41;
-  --text-color: #ffffff;
-  --border-color: #4a4b6b;
-  --glow-color: rgba(0, 185, 174, 0.4);
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e67e22;
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --border-color: #e0e0e0;
 }
 
 .App {
@@ -16,134 +15,105 @@
   align-items: center;
   background-color: var(--bg-color);
   padding: 20px;
-  color: var(--text-color);
 }
 
 .game-container {
   max-width: 600px;
   width: 100%;
-  padding: 30px;
-  background: rgba(74, 75, 107, 0.3);
-  border-radius: 20px;
-  box-shadow: 0 0 20px var(--glow-color);
+  padding: 20px;
 }
 
 .game-title {
-  color: var(--accent-color);
+  color: var(--primary-color);
   margin-bottom: 30px;
   font-size: 2.5rem;
-  text-shadow: 3px 3px var(--primary-color);
-  letter-spacing: 2px;
 }
 
 .game-mode {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .mode-button {
-  padding: 12px 24px;
-  font-size: 1.2rem;
-  font-family: 'VT323', monospace;
-  border: 3px solid var(--primary-color);
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 2px solid var(--primary-color);
   background: transparent;
   color: var(--primary-color);
-  border-radius: 12px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 0 10px var(--glow-color);
 }
 
 .mode-button.active {
   background: var(--primary-color);
-  color: var(--bg-color);
-  box-shadow: 0 0 15px var(--primary-color);
+  color: white;
 }
 
 .mode-button:hover {
   background: var(--primary-color);
-  color: var(--bg-color);
-  transform: translateY(-2px);
-  box-shadow: 0 0 20px var(--primary-color);
+  color: white;
 }
 
 .status {
   margin: 20px 0;
-  font-size: 1.8rem;
-  color: var(--secondary-color);
+  font-size: 1.2rem;
+  color: var(--accent-color);
   font-weight: bold;
-  text-shadow: 2px 2px var(--border-color);
 }
 
 .game-board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 30px auto;
-  max-width: 360px;
-  padding: 15px;
-  background: rgba(74, 75, 107, 0.2);
-  border-radius: 15px;
-  box-shadow: 0 0 15px var(--glow-color);
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 300px;
 }
 
 .square {
   width: 100%;
   aspect-ratio: 1;
-  background: rgba(26, 27, 65, 0.8);
-  border: 3px solid var(--primary-color);
-  border-radius: 12px;
-  font-size: 3rem;
-  font-family: 'Press Start 2P', cursive;
+  background: white;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  font-size: 2rem;
+  font-weight: bold;
   color: var(--text-color);
   cursor: pointer;
   transition: all 0.3s ease;
-  text-shadow: 2px 2px var(--border-color);
-  box-shadow: 0 0 10px var(--glow-color);
 }
 
 .square:hover:not(:disabled) {
-  background: rgba(0, 185, 174, 0.2);
-  box-shadow: 0 0 15px var(--primary-color);
-  transform: translateY(-2px);
+  background: rgba(52, 152, 219, 0.1);
 }
 
 .square.filled {
   cursor: not-allowed;
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 10px var(--secondary-color);
 }
 
 .reset-button {
-  margin-top: 30px;
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  font-family: 'VT323', monospace;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1rem;
   background: var(--secondary-color);
-  color: var(--bg-color);
+  color: white;
   border: none;
-  border-radius: 12px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 0 15px rgba(255, 107, 107, 0.4);
 }
 
 .reset-button:hover {
   opacity: 0.9;
   transform: translateY(-2px);
-  box-shadow: 0 0 20px var(--secondary-color);
 }
 
 /* Responsive Design */
 @media (max-width: 480px) {
   .game-container {
-    padding: 20px;
+    padding: 10px;
   }
 
   .game-title {
@@ -151,15 +121,15 @@
   }
 
   .game-board {
-    max-width: 300px;
+    max-width: 280px;
   }
 
   .square {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .mode-button {
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
 }
